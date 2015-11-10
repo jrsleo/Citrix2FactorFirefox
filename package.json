@@ -1,0 +1,16 @@
+{
+  "title": "Citrix2Factor",
+  "name": "citrix2factorfirefox",
+  "version": "1.0.0",
+  "description": "This is an extension designed to help input the two factor authentication needed to log into the Citrix VPN",
+  "main": "index.js",
+  "author": "Jordan Schultz",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}

@@ -12,4 +12,16 @@ var myPanel = require("sdk/panel").Panel({
   contentScriptFile: "./options.js"
 });
 
-myPanel.show();
+var menuitem = require("menuitem");
+var menuitem = menuitem.Menuitem({
+  id: "panel",
+  menuid: "menu_ToolsPopup",
+  label: "Citrix2Factor Grid",
+  onCommand: function() {
+    myPanel.show();
+  },
+  insertbefore: "menu_pageInfo"
+});
+
+
+

@@ -2,7 +2,7 @@
   "title": "Citrix2Factor",
   "name": "citrix2factorfirefox",
   "version": "1.0.0",
-  "description": "This is an extension designed to help input the two factor authentication needed to log into the Citrix VPN",
+  "description": "This is an extension designed to help input the two factor authentication needed to log into the Citrix VPN. Access your personal grid by clicking on the Tools Menu and selecting the 'Citrix2Factor Grid' option.",
   "main": "index.js",
   "author": "Jordan Schultz",
   "engines": {
@@ -12,5 +12,8 @@
   "license": "MIT",
   "keywords": [
     "jetpack"
-  ]
+  ],
+  "dependencies": {
+    "menuitem": "0.0.5"
+  }
 }

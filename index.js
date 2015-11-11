@@ -1,13 +1,14 @@
-// Import the page-mod API
-var pageMod = require("sdk/page-mod");
- 
+var pageMod = require("sdk/page-mod"); 
+var ss = require("sdk/simple-storage");
+ss.storage.A1 = "Z";
+
 // Create a page-mod
 pageMod.PageMod({
   include: "https://citrix2.alldata.net/Citrix/XenAppCol/auth/challenge.aspx",
   contentScriptFile: "./challenge.js"
 });
 
-var myPanel = require("sdk/panel").Panel({
+var options = require("sdk/panel").Panel({
   contentURL: "./options.html",
   contentScriptFile: "./options.js"
 });
@@ -18,7 +19,8 @@ var menuitem = menuitem.Menuitem({
   menuid: "menu_ToolsPopup",
   label: "Citrix2Factor Grid",
   onCommand: function() {
-    myPanel.show();
+    options.show();
+    options.port.emit("restore", ss);
   },
   insertbefore: "menu_pageInfo"
 });

@@ -1,6 +1,7 @@
 document.getElementById('save').addEventListener('click', save_options);
 document.getElementById('parent').addEventListener('keyup', moveNextField);
 
+// Automatically selects the next field in the grid
 function moveNextField(e) {
   if (e.target !== e.currentTarget) {
         var currentField = e.target;
@@ -16,6 +17,7 @@ function moveNextField(e) {
   e.stopPropagation();
 }
 
+// Return the next ID in the grid
 function getNextID(field) {
   var temp = field.id;
   var output = "";
@@ -33,6 +35,7 @@ function getNextID(field) {
   return output;
 }
 
+// Returns the next letter of the alphabet
 function nextLetter(s){
     return s.replace(/([a-zA-Z])[^a-zA-Z]*$/, function(a){
         var c = a.charCodeAt(0);
